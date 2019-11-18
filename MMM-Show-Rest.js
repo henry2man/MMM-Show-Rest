@@ -5,6 +5,7 @@ Module.register("MMM-Show-Rest",{
 	defaults: {
 		updateInterval: 60000,
                 retryDelay: 5000,
+		header: "MMM-Show-Rest",
 		// Your URL here
 		server: "http://headers.jsontest.com/",
 	},
@@ -89,9 +90,7 @@ Module.register("MMM-Show-Rest",{
                         let header = document.createElement("header");
                         header.className = "module-header"
 
-                        // Use translate function
-                        //             this id defined in translations files
-                        header.innerHTML = 'Resultados OPE';
+                        header.innerHTML = self.config.header;
 			wrapper.appendChild(header);
 
 			var keys = Object.keys(this.dataRequest);
@@ -106,7 +105,7 @@ Module.register("MMM-Show-Rest",{
 
 			var dateelem = document.createElement("div");
 			dateelem.className = "small";
-			dateelem.innerHTML = "Actualizado: " + new Date().toLocaleString();
+			dateelem.innerHTML = "Updated: " + new Date().toLocaleString();
 			wrapper.appendChild(dateelem);
 		}
 
