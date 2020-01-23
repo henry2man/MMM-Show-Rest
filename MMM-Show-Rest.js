@@ -99,7 +99,7 @@ Module.register("MMM-Show-Rest",{
  				let elem = document.createElement("div");
 				elem.className = "normal";
 
-				elem.innerHTML = key + ': <strong style="color:green">' + value + '</strong>';
+				elem.innerHTML = key + ': <strong style="color:white">' + value + '</strong>';
 				wrapper.appendChild(elem);
 			};
 
